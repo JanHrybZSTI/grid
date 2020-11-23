@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+.container {
+  height: 100vh;
+  border: 2px solid rgb(43, 129, 211);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 14% 14% 28% 28% 16%;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "section section section aside"
+    "article article article aside"
+    "footer footer footer footer";
+}
+header {
+  grid-area: header;
+  text-align: center;
+  border: 2px solid rgb(43, 129, 211);
+}
+nav {
+  grid-area: nav;
+  text-align: center;
+  border: 2px solid rgb(43, 129, 211);
+}
+section {
+  grid-area: section;
+  text-align: center;
+  border: 2px solid rgb(43, 129, 211);
+}
+article {
+  text-align: center;
+  grid-area: article;
+  border: 2px solid rgb(43, 129, 211);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
+  grid-template-areas:
+    "artykul-naglowek"
+    "artykul-lorem";
+}
+article > h2 {
+  grid-area: artykul-naglowek;
+  display: grid;
+  align-items: center;
+}
+article > p {
+  grid-area: artykul-lorem;
+  display: grid;
+  align-items: center;
+}
+aside {
+  grid-area: aside;
+  text-align: center;
+  border: 2px solid rgb(43, 129, 211);
+}
+footer {
+  grid-area: footer;
+  text-align: center;
+  border: 2px solid rgb(43, 129, 211);
+}
